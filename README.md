@@ -98,3 +98,13 @@ If you find that there is functionality missing or bugs in the release version, 
  * Open the this current directory in Android Studio (org.eclipse.paho.android.service).
  * In the toolbar along the top, there should be a dropdown menu. Make sure that it contains 'org.eclipse.android.sample' then click the Green 'Run' Triangle. It should now build and launch an Virtual Android Device to run the App. If you have an Android device with developer mode turned on plugged in, you will have the oppertunity to run it directly on that.
  * If you have any problems, check out the Android Developer Documentation for help: https://developer.android.com
+
+
+-----
+以上是paho官方git说明。
+我在此附上关于sample的一些说明。
+
+* 在该工程中总共有三个module我们依次说明
+    - org.eclipse.paho.android.sample 这个module是一个完整的MQTT Android客户端。功能齐全，包含了创建client 、发布消息、申请消息。长按侧边栏的Client可以编辑或者删除，可以查看历史
+    - org.eclipse.paho.android.service 本身是一个library，其他两个module都依赖此module，也是MQTT 所有的处理方法的源码。
+    - paho.mqtt.android.example 该module只是一个简单的演示如何建立连接，发送消息，接收消息的客户端，可以认为是精简版。如果要连接自己的MQTT Server，请更改代码中的server uri和username 以及password字段即可。
